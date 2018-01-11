@@ -28,14 +28,14 @@
         <div class="form-group">
           <label>Set frequency (ReactiveForm)</label>
           <cron-jobs [formControl]="freqControl" [config]="cronConfig" [validate]="cronValidate"></cron-jobs>
-          <div [ngClass]="{'d-block': freqControl.errors?.required}" class="invalid-feedback">Field is required</div>
+          <div [ngClass]="{'d-block': freqControl.errors?.required}" class="invalid-feedback">Pole jest wymagane</div>
         </div>
 
         <div class="form-group">
           <label>Set frequency no multi choice (reactive form)</label>
           <cron-jobs [formControl]="freqSingleControl" [config]="cronSingleConfig"
                      [validate]="cronValidate"></cron-jobs>
-          <div [ngClass]="{'d-block': freqControl.errors?.required}" class="invalid-feedback">Field is required</div>
+          <div [ngClass]="{'d-block': freqControl.errors?.required}" class="invalid-feedback">Pole jest wymagane</div>
         </div>
       </form>
 

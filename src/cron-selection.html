@@ -31,7 +31,7 @@
   }
 </style>
 <div class="cron-wrap">
-  <span>Every: </span>
+  <span>Co każdy: </span>
   <div class="cron-select-wrap">
     <select class="cron-select" [(ngModel)]="selectedBase">
             <option *ngFor="let item of initialFrequencies" [ngValue]="item.value">{{item.label}}</option>
@@ -40,13 +40,13 @@
 
   <div class="select-options">
 
-    <span *ngIf="selectedBase == 4">on </span>
+    <span *ngIf="selectedBase == 4">w </span>
     <div *ngIf="selectedBase == 4" class="cron-select-wrap">
       <select [multiple]="cronJobConfig.multiple" class="cron-select day-value" [(ngModel)]="selectedDay">
       <option *ngFor="let item of cronDayValues" [ngValue]="item.value">{{item.label}}</option>
       </select>
     </div>
-    <span *ngIf="selectedBase >= 5">on the </span>
+    <span *ngIf="selectedBase >= 5">dnia </span>
     <div *ngIf="selectedBase >= 5" class="cron-select-wrap">
 
       <select [multiple]="cronJobConfig.multiple" class="cron-select day-of-month-value" [(ngModel)]="selectedDayOfMonth">
@@ -55,14 +55,14 @@
     </div>
 
 
-    <span *ngIf="selectedBase == 6">of </span>
+    <span *ngIf="selectedBase == 6">miesiąc </span>
     <div *ngIf="frequency.base == 6" class="cron-select-wrap">
       <select [multiple]="cronJobConfig.multiple" class="cron-select month-value" [(ngModel)]="selectedMonth">
         <option *ngFor="let item of cronMonthName" [ngValue]="item.value">{{item.label}}</option>
       </select>
     </div>
 
-    <span *ngIf="selectedBase >= 2">at </span>
+    <span *ngIf="selectedBase >= 2">o </span>
     <div *ngIf="selectedBase >= 3" class="cron-select-wrap">
       <select [multiple]="cronJobConfig.multiple" class="cron-select hour-value" [(ngModel)]="selectedHour">
 
