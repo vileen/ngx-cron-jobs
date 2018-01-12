@@ -11,7 +11,7 @@
           *ngIf="(baseFrequency$ | async) === 4" formControlName="daysOfWeek">
     <option *ngFor="let item of daysOfWeekData" [value]="item.value">{{item.label}}</option>
   </select>
-  <label class="mx-sm-2" *ngIf="(baseFrequency$ | async) >= 5">dnia</label>
+  <label class="mx-sm-2" *ngIf="(baseFrequency$ | async) >= 5">dzień</label>
   <select multiple [multiple]="config.multiple" class="form-control" (blur)="onBlur()"
           [ngClass]="{'is-valid': getIsValid(), 'is-invalid': getIsInvalid()}"
           *ngIf="(baseFrequency$ | async) >= 5" formControlName="daysOfMonth">
@@ -54,7 +54,7 @@
         <option *ngFor="let item of daysOfWeekData" [value]="item.value">{{item.label}}</option>
       </select>
     </div>
-    <span *ngIf="(baseFrequency$ | async) >= 5">dnia </span>
+    <span *ngIf="(baseFrequency$ | async) >= 5">dzień </span>
     <div *ngIf="(baseFrequency$ | async) >= 5" class="cron-select-wrap">
       <select multiple [multiple]="config.multiple" class="cron-select day-of-month-value" (blur)="onBlur()"
               [ngClass]="{'is-valid': getIsValid(), 'is-invalid': getIsInvalid()}"

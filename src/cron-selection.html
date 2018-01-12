@@ -46,7 +46,7 @@
       <option *ngFor="let item of cronDayValues" [ngValue]="item.value">{{item.label}}</option>
       </select>
     </div>
-    <span *ngIf="selectedBase >= 5">dnia </span>
+    <span *ngIf="selectedBase >= 5">dzień </span>
     <div *ngIf="selectedBase >= 5" class="cron-select-wrap">
 
       <select [multiple]="cronJobConfig.multiple" class="cron-select day-of-month-value" [(ngModel)]="selectedDayOfMonth">
