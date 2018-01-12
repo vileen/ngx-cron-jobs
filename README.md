@@ -16,7 +16,7 @@ $ npm install ngx-cron-jobs --save
 $ yarn add ngx-cron-jobs
 ```
 
-## Consuming your library
+## Usage
 
 
 and then from your Angular `AppModule`:
@@ -47,6 +47,27 @@ Once your library is imported, you can use its components, directives and pipes 
 <!-- additional parameters -->
 <cron-jobs [formControl]="freqControl" [config]="cronConfig"  [validate]="cronValidate"></cron-jobs>
 ```
+
+## Without npm:
+
+In package.json import :
+
+`"ngx-cron-jobs": "https://github.com/vileen/ngx-cron-jobs.git",`
+
+
+Add into tsconfig.json:
+
+
+```
+  "include": [
+    "src/**/*",
+    "node_modules/ngx-cron-jobs/src/app/lib/cron-jobs.module.ts"
+  ]
+```
+
+In app.module.ts:
+
+`import {CronJobsModule} from 'ngx-cron-jobs/src/app/lib/cron-jobs.module';`
 
 ## Configuration:
 

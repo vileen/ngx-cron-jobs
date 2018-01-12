@@ -23,7 +23,7 @@
           *ngIf="(baseFrequency$ | async) === 6" formControlName="months">
     <option *ngFor="let item of monthsData" [ngValue]="item.value">{{item.label}}</option>
   </select>
-  <label class="mx-sm-2" *ngIf="(baseFrequency$ | async) >= 2">at</label>
+  <label class="mx-sm-2" *ngIf="(baseFrequency$ | async) >= 2">o</label>
   <select multiple [multiple]="config.multiple" class="form-control" (blur)="onBlur()"
           [ngClass]="{'is-valid': getIsValid(), 'is-invalid': getIsInvalid()}"
           *ngIf="(baseFrequency$ | async) >= 3" formControlName="hours">
@@ -35,7 +35,7 @@
           *ngIf="(baseFrequency$ | async) >=2" formControlName="minutes">
     <option *ngFor="let item of minutesData" [value]="item.value">{{item.label}}</option>
   </select>
-  <label class="mx-sm-2" *ngIf="(baseFrequency$ | async) === 2">past the hour</label>
+  <label class="mx-sm-2" *ngIf="(baseFrequency$ | async) === 2">po godzinie</label>
 </div>
 <div class="cron-wrap" *ngIf="!config?.bootstrap" [formGroup]="cronJobsForm">
   <span>Co każdy: </span>
@@ -70,7 +70,7 @@
         <option *ngFor="let item of monthsData" [ngValue]="item.value">{{item.label}}</option>
       </select>
     </div>
-    <span *ngIf="(baseFrequency$ | async) >= 3 ">at </span>
+    <span *ngIf="(baseFrequency$ | async) >= 3 ">o </span>
     <div *ngIf="(baseFrequency$ | async) >= 3" class="cron-select-wrap">
       <select multiple [multiple]="config.multiple" class="cron-select hour-value" (blur)="onBlur()"
               [ngClass]="{'is-valid': getIsValid(), 'is-invalid': getIsInvalid()}"
@@ -86,6 +86,6 @@
         <option *ngFor="let item of minutesData" [value]="item.value">{{item.label}}</option>
       </select>
     </div>
-    <span *ngIf="(baseFrequency$ | async) === 2"> past the hour</span>
+    <span *ngIf="(baseFrequency$ | async) === 2"> po godzinie</span>
   </div>
 </div>
